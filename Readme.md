@@ -87,3 +87,16 @@ This project showcases a modern **microservices-based architecture** for a scala
    ```bash
    git clone https://github.com/your-username/your-repo.git
    cd your-repo
+
+2. Set up the environment:
+- Create `.env` files for each service with the required environment variables.
+
+3. Build and run the microservices using Docker:
+Run the following command to build and start all services:
+```bash
+docker-compose up --build.
+
+4. Access the Application
+
+- **API Gateway:** [http://localhost:8000](http://localhost:8000)
+- **Monitoring Dashboard:** [http://localhost:3000](http://localhost:3000) (Grafana)
