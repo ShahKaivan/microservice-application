@@ -1,0 +1,33 @@
+# kong/kong.yml
+_format_version: "3.0"
+
+services:
+  - name: auth-service
+    url: http://auth-service:8081
+    routes:
+      - name: auth-routes
+        paths:
+          - /auth
+        strip_path: false
+        protocols: 
+          - http
+
+  - name: product-service
+    url: http://product-service:8082
+    routes:
+      - name: product-routes
+        paths:
+          - /products
+        strip_path: false
+        protocols:
+          - http
+
+  - name: order-service
+    url: http://order-service:8083
+    routes:
+      - name: order-routes
+        paths:
+          - /orders
+        strip_path: false
+        protocols:
+          - http
